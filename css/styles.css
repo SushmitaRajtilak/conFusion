@@ -37,3 +37,17 @@ body {
 .navbar-dark {
 	background-color: #512DA8
 }
+
+.radio-space{
+	margin-right: 4%
+}
+
+.badge-space{
+	margin-right: 2%
+}
+
+.btn-padding{
+	padding-left: 20%;
+	padding-right: 20%;
+	margin-top: 15%
+}

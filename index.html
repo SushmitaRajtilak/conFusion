@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-new.css">
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -31,7 +31,8 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <spam class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a  name='loginLink'>
+                    <!--Removed stuff from Assignment 4 data-toggle="modal" data-target="#loginModal"-->
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </spam>
@@ -86,7 +87,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3">
-                   <a href="#reserve" data-toggle="modal" data-target="#reserveModal"><button type="button" class="btn btn-warning btn-lg btn-padding">Reserve Table</button></a>
+                   <a href="#reserve"><button type="button" id="reserveButton" class="btn btn-warning btn-lg btn-padding">Reserve Table</button></a>
+                   <!--Removed stuff from Assignment 4 data-toggle="modal" data-target="#reserveModal"-->
                    <!--data-toggle="tooltip" data-html="true" title="Or Call Us At <br><strong>+91 9003057129</strong>"data-placement="bottom"-->
                 </div>
             </div>
@@ -377,6 +379,17 @@
             $('[data-toggle="tooltip"]').tooltip() 
         });
     </script>-->
+    <script>
+        $("#reserveButton").on("click",function(){
+            $("#reserveModal").modal("show");
+        });
+    </script>
+     <script>
+        $(document).on("click","a[name='loginLink']",function(){
+            $("#loginModal").modal("show");
+        });
+    </script>
+        
 </body>
 
 </html>
